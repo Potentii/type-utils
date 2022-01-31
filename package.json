@@ -1,0 +1,38 @@
+{
+  "name": "@potentii/type-utils",
+  "version": "1.0.0",
+  "description": "Type utilities",
+  "author": "Guilherme Reginaldo Ruella <potentii@gmail.com>",
+  "license": "MIT",
+  "main": "main.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "mocha ./tests"
+  },
+  "files": [
+    "main.mjs",
+    "libs/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "type",
+    "instance",
+    "typeof",
+    "instanceof",
+    "potentii",
+    "utils"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Potentii/type-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Potentii/type-utils/issues"
+  },
+  "homepage": "https://github.com/Potentii/type-utils#readme",
+  "devDependencies": {
+    "mocha": "9.2.0",
+    "chai": "4.3.6"
+  }
+}
