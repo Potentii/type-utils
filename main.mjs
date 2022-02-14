@@ -1,8 +1,6 @@
-import TypeOf from "./libs/type-of.mjs";
-import InstanceOf from "./libs/instance-of.mjs";
+import TypeUtils from "./libs/type-utils.mjs";
 
 
 export {
-    TypeOf,
-    InstanceOf,
+    TypeUtils
 };

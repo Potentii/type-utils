@@ -9,7 +9,7 @@ export default class InstanceOf{
      * @param {boolean} [required=false] Wether it should throw if the value is undefined/null
      * @throws {TypeError} If the type conditions do not satisfy
      */
-    static checkValue(name, value, classType, required = false){
+    checkValue(name, value, classType, required = false){
         if(!required && (value === null || value === undefined))
             return;
         if(!(value instanceof classType))
@@ -26,7 +26,7 @@ export default class InstanceOf{
      * @param {boolean} [requiredItems=true] Wether it should throw if one or more array entries are undefined/null
      * @throws {TypeError} If the type conditions do not satisfy
      */
-    static checkArray(name, value, classType, required = false, requiredItems = true){
+    checkArray(name, value, classType, required = false, requiredItems = true){
         if(!required && (value === null || value === undefined))
             return;
         if(!Array.isArray(value) || !value.every(v => v instanceof classType) || (requiredItems && value.some(v => v===null || v===undefined)))

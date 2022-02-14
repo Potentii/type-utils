@@ -13,7 +13,7 @@ export default class TypeOf{
      * @param {boolean} [required=false] Wether it should throw if the value is undefined/null
      * @throws {TypeError} If the type conditions do not satisfy
      */
-    static checkValue(name, value, type, required = false){
+    checkValue(name, value, type, required = false){
         if(!required && (value === null || value === undefined))
             return;
         if(value === null || value === undefined || typeof value != type)
@@ -30,7 +30,7 @@ export default class TypeOf{
      * @param {boolean} [requiredItems=true] Wether it should throw if one or more array entries are undefined/null
      * @throws {TypeError} If the type conditions do not satisfy
      */
-    static checkArray(name, value, type, required = false, requiredItems = true){
+    checkArray(name, value, type, required = false, requiredItems = true){
         if(!required && (value === null || value === undefined))
             return;
         if(!Array.isArray(value) || !value.every(v => typeof v == type) || (requiredItems && value.some(v => v===null || v===undefined)))
